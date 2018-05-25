@@ -1,5 +1,12 @@
 # Systemd
 
+----
+> THIS IS A HIERA 4 FORK OF THE MODULE AND WILL REVERT TO THE ORIGINAL MODULE
+> ONCE HIERA 4 SUPPORTING VERSIONS OF PUPPET ARE FULLY END OF LIFE
+>
+> See https://github.com/camptocamp/puppet-systemd/pull/73 for details
+----
+
 [![Puppet Forge](http://img.shields.io/puppetforge/v/camptocamp/systemd.svg)](https://forge.puppetlabs.com/camptocamp/systemd)
 [![Build Status](https://travis-ci.org/camptocamp/puppet-systemd.png?branch=master)](https://travis-ci.org/camptocamp/puppet-systemd)
 

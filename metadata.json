@@ -1,12 +1,12 @@
 {
-  "name": "camptocamp-systemd",
+  "name": "simp-systemd",
   "version": "1.1.1",
-  "author": "camptocamp",
-  "summary": "Puppet Systemd module",
+  "author": "simp",
+  "summary": "Puppet Systemd module - Hiera 4",
   "license": "Apache-2.0",
-  "source": "https://github.com/camptocamp/puppet-systemd",
-  "project_page": "https://github.com/camptocamp/puppet-systemd",
-  "issues_url": "https://github.com/camptocamp/puppet-systemd/issues",
+  "source": "https://github.com/simp/puppet-systemd",
+  "project_page": "https://github.com/simp/puppet-systemd",
+  "issues_url": "https://simp-project.atlassian.net",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
@@ -16,7 +16,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.10.10 < 6.0.0"
+      "version_requirement": ">= 4.7.0 < 6.0.0"
     }
   ],
   "operatingsystem_support": [
@@ -50,5 +50,6 @@
     {
       "operatingsystem": "Archlinux"
     }
-  ]
+  ],
+  "data_provider": "hiera"
 }
