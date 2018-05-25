@@ -1,12 +1,12 @@
 {
-  "name": "camptocamp-systemd",
+  "name": "simp-systemd",
   "version": "2.1.0",
-  "author": "camptocamp",
-  "summary": "Puppet Systemd module",
+  "author": "simp",
+  "summary": "Puppet Systemd module - Temporary Fork",
   "license": "Apache-2.0",
-  "source": "https://github.com/camptocamp/puppet-systemd",
-  "project_page": "https://github.com/camptocamp/puppet-systemd",
-  "issues_url": "https://github.com/camptocamp/puppet-systemd/issues",
+  "source": "https://github.com/simp/puppet-systemd",
+  "project_page": "https://github.com/simp/puppet-systemd",
+  "issues_url": "https://simp-project.atlassian.net",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
