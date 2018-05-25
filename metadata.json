@@ -50,5 +50,6 @@
     {
       "operatingsystem": "Archlinux"
     }
-  ]
+  ],
+  "data_provider": "hiera"
 }
