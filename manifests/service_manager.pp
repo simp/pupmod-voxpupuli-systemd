@@ -52,11 +52,12 @@ class systemd::service_manager (
     }
 
     ini_setting { "system/${option}":
-      ensure  => $vh.get('ensure', 'present'),
-      path    => '/etc/systemd/system.conf',
-      section => 'Manager',
-      setting => $option,
-      value   => $vh['value'],
+      ensure            => $vh.get('ensure', 'present'),
+      path              => '/etc/systemd/system.conf',
+      section           => 'Manager',
+      setting           => $option,
+      value             => $vh['value'],
+      key_val_separator => '=',
     }
   }
 

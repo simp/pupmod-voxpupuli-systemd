@@ -10,10 +10,11 @@ class systemd::journald {
   $systemd::journald_settings.each |$option, $value| {
     ini_setting {
       $option:
-        path    => '/etc/systemd/journald.conf',
-        section => 'Journal',
-        setting => $option,
-        notify  => Service['systemd-journald'],
+        path              => '/etc/systemd/journald.conf',
+        section           => 'Journal',
+        setting           => $option,
+        key_val_separator => '=',
+        notify            => Service['systemd-journald'],
     }
     if $value =~ Hash {
       Ini_setting[$option] {

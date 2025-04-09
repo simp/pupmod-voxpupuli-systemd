@@ -11,10 +11,11 @@ class systemd::oomd {
   $systemd::oomd_settings.each |$option, $value| {
     ini_setting {
       $option:
-        path    => '/etc/systemd/oomd.conf',
-        section => 'OOM',
-        setting => $option,
-        notify  => Service['systemd-oomd'],
+        path              => '/etc/systemd/oomd.conf',
+        section           => 'OOM',
+        setting           => $option,
+        key_val_separator => '=',
+        notify            => Service['systemd-oomd'],
     }
     if $value =~ Hash {
       Ini_setting[$option] {
