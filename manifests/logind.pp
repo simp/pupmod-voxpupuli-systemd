@@ -10,10 +10,11 @@ class systemd::logind {
   $systemd::logind_settings.each |$option, $value| {
     ini_setting {
       $option:
-        path    => '/etc/systemd/logind.conf',
-        section => 'Login',
-        setting => $option,
-        notify  => Service['systemd-logind'],
+        path              => '/etc/systemd/logind.conf',
+        section           => 'Login',
+        setting           => $option,
+        key_val_separator => '=',
+        notify            => Service['systemd-logind'],
     }
     if $value =~ Hash {
       Ini_setting[$option] {
