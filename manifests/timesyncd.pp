@@ -38,12 +38,13 @@ class systemd::timesyncd (
       $_ntp_server = join($ntp_server, ' ')
     }
     ini_setting { 'ntp_server':
-      ensure  => 'present',
-      value   => $_ntp_server,
-      setting => 'NTP',
-      section => 'Time',
-      path    => '/etc/systemd/timesyncd.conf',
-      notify  => Service['systemd-timesyncd'],
+      ensure            => 'present',
+      value             => $_ntp_server,
+      setting           => 'NTP',
+      section           => 'Time',
+      path              => '/etc/systemd/timesyncd.conf',
+      key_val_separator => '=',
+      notify            => Service['systemd-timesyncd'],
     }
   }
 
